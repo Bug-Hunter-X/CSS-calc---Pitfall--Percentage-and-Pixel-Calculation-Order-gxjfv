@@ -1,0 +1,22 @@
+/* bug.css */
+div.container {
+  width: 300px;
+  background-color: lightgray;
+}
+div.inner {
+  width: calc(50% - 10px);
+  background-color: red;
+}
+
+/* bugSolution.css */
+div.container {
+  width: 300px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center; /* Center the inner div */
+}
+div.inner {
+  width: calc(50% - 10px);
+  background-color: red; 
+  flex-shrink: 0; /* Prevents inner div from shrinking below calc value */
+} 
